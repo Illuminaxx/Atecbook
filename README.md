@@ -1,9 +1,9 @@
 # Atecbook
-C'est un projet amusant pour démontrer mes compétences Mongo Express React Node, le projet est assez vaste pour être comme une application du monde réel pourrait l'être.
+C'est un projet amusant pour démontrer mes compétences Mongo Express React Node, le projet est assez vaste pour être appliquée dans le monde réél.
 
 ## Caractéristiques
 ### Login and Signup
-L'utilisateur peut créer un compte en fournissant un courriel et en créant un mot de passe et peut les utiliser pour se connecter à tout moment par la suite ; toutes les informations sont enregistrées.
+L'utilisateur peut créer un compte en fournissant un courriel et en créant un mot de passe et peut les utiliser pour se connecter à tout moment par la suite, toutes les informations sont enregistrées.
 
 #### Cryptage
 Le mot de passe de l'utilisateur est crypté à l'aide de bcrypt pour renforcer la sécurité.
