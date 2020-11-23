@@ -1,5 +1,5 @@
 # Atecbook
-C'est un projet amusant pour démontrer mes compétences MERN, le projet est assez vaste pour être comme une application du monde réel pourrait l'être.
+C'est un projet amusant pour démontrer mes compétences Mongo Express React Node, le projet est assez vaste pour être comme une application du monde réel pourrait l'être.
 
 ## Caractéristiques
 ### Login and Signup
