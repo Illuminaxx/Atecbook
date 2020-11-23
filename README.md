@@ -17,7 +17,7 @@ Les utilisateurs peuvent créer un message que tous les autres utilisateurs peuv
 ## Utilisation des technologies
 
 ### [Reactjs](https://github.com/facebook/react) 
-React is used for Front End, along with other required liberaries enlisted below.
+React est utilisé pour le Front End, ainsi que d'autres bibliothèques obligatoires énumérées ci-dessous.
 
 * [axios](https://github.com/axios/axios)
 * [react-router-dom](react-router-dom)
@@ -29,15 +29,15 @@ React is used for Front End, along with other required liberaries enlisted below
 * [react-moment](https://github.com/headzoo/react-moment)
 
 ### [Nodejs](https://github.com/nodejs)
-Node use used as Java Script runtime engine to power the backend Expressjs server.
+Utilisation de NodeJS utilisé comme moteur d'exécution Java Script pour alimenter le serveur backend Expressjs.
 
 ### [Expressjs](github.com/expressjs/express)
-Express is choosed for backEnd server.
+Express est choisi comme serveur backend.
 
 ### [Mongodb](https://github.com/mongodb/mongo)
-All the data is saved on mongodb clustor hosted on mongoAtlas.
+Toutes les données sont sauvegardées sur le cluster mongodb hébergé sur mongoAtlas.
 
-### Other back end dependencies 
+### Autres dépendances backend
 * [bcryptjs](https://github.com/dcodeIO/bcrypt.js/blob/master/README.md)
 * [express-validator](https://github.com/express-validator/express-validator)
 * [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken)
