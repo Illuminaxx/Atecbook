@@ -5,8 +5,8 @@
   "background_color": "#2196f3",
   "description": "Social network for a Atecna Company",
   "display": "standalone",
-  "scope": "http://localhost:3000/",
-  "start_url": "http://localhost:3000/",
+  "scope": "https://atecbook.herokuapp.com/",
+  "start_url": "https://atecbook.herokuapp.com/",
   "icons": [
     {
       "src": "favicon.ico",
