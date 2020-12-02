@@ -1,6 +1,7 @@
 /* eslint-disable no-restricted-globals */
 var CACHE_NAME = "ATEC'Book-PWA";
 var urlsToCache = [
+    '/',
     '/index.html'
 ];
 
