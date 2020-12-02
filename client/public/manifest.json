@@ -6,7 +6,7 @@
   "description": "Social network for a Atecna Company",
   "display": "standalone",
   "scope": "/",
-  "start_url": "./index.html",
+  "start_url": "/",
   "icons": [
     {
       "src": "favicon.ico",
