@@ -3,8 +3,8 @@ var urlsToCache = [
     '/static/js/main.chunk.js',
     '/static/js/0.chunk.js',
     '/static/js/bundle.js',
-    '/',
-    '/index.html'
+    '/index.html',
+    '/'
 ];
 
 
@@ -21,7 +21,7 @@ this.addEventListener('install', (event) => {
 this.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)
-        .then(function (response) {
+        .then((response) => {
             if(response) {
                 return response;
             }
