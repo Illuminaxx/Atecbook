@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-globals */
 var CACHE_NAME = "ATEC'Book-PWA";
 var urlsToCache = [
     '/',
@@ -7,7 +6,7 @@ var urlsToCache = [
 
 
 // Install SW
-self.addEventListener('install', event => {
+this.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
             return cache.addAll(urlsToCache);
@@ -16,7 +15,7 @@ self.addEventListener('install', event => {
 });
 
 // Cache and requests returned
-self.addEventListener('fetch', event => {
+this.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)
         .then(function (response) {
@@ -30,7 +29,7 @@ self.addEventListener('fetch', event => {
 });
 
 //Update SW
-self.addEventListener('activate', event => {
+this.addEventListener('activate', event => {
     var cacheWhitelist = ['wms-pwa'];
     event.waitUntil(
         caches.keys().then(function(cacheNames)  {
