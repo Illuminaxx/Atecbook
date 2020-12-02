@@ -16,7 +16,7 @@ var urlsToCache = [
 
 
 // Install SW
-this.addEventListener('install', (event) => {
+self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
             return cache.addAll(urlsToCache);
@@ -24,22 +24,7 @@ this.addEventListener('install', (event) => {
     )
 });
 
-// Cache and requests returned
-this.addEventListener('fetch', event => {
-    event.respondWith(
-        caches.match(event.request)
-        .then((response) => {
-            if(response) {
-                return response;
-            }
-
-            //return fetch(event.request);
-        })
-    );
-});
-
-//Update SW
-this.addEventListener('activate', (event) => {
+self.addEventListener('activate', (event) => {
     var cacheWhitelist = ['wms-pwa'];
     event.waitUntil(
         caches.keys().then(function(cacheNames)  {
@@ -53,3 +38,19 @@ this.addEventListener('activate', (event) => {
         })
     );
 });
+
+// Cache and requests returned
+self.addEventListener('fetch', event => {
+    event.respondWith(
+        caches.match(event.request)
+        .then((response) => {
+            if(response) {
+                return response;
+            }
+
+            //return fetch(event.request);
+        })
+    );
+});
+
+//Update SW
