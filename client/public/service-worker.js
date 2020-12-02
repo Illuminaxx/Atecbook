@@ -1,8 +1,5 @@
 var CACHE_NAME = "ATEC'Book-PWA";
 var urlsToCache = [
-    '/static/js/main.chunk.js',
-    '/static/js/0.chunk.js',
-    '/static/js/bundle.js',
     '/static/js/2.c734d9ec.chunk.js',
     '/static/js/main.87706e13.chunk.js',
     '/static/js/runtime-main.c012fedc.js',
@@ -48,7 +45,7 @@ self.addEventListener('fetch', event => {
                 return response;
             }
 
-            //return fetch(event.request);
+            return fetch(event.request);
         })
     );
 });
