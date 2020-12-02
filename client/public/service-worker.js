@@ -3,7 +3,15 @@ var urlsToCache = [
     '/static/js/main.chunk.js',
     '/static/js/0.chunk.js',
     '/static/js/bundle.js',
-    '/index.html'
+    '/static/js/2.c734d9ec.chunk.js',
+    '/static/js/main.87706e13.chunk.js',
+    '/static/js/runtime-main.c012fedc.js',
+    '/favicon.ico',
+    'logo192.png',
+    'logo256.png',
+    'logo384.png',
+    'logo512.png',
+    
 ];
 
 
