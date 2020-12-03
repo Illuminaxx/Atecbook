@@ -3,9 +3,12 @@ var doCache = true;
 var CACHE_NAME = "atec-book-cache";
 
 var urlsToCache = [
+    '/static/css/main.5d019410.chunk.css',
     '/static/js/2.c734d9ec.chunk.js',
     '/static/js/main.87706e13.chunk.js',
     '/static/js/runtime-main.c012fedc.js',
+    '/static/media/logo.5e3be87f.svg',
+    '/static/media/showcase.36c4bd33.jpg',
     'favicon.ico',
     'logo192.png',
     'logo256.png',
@@ -55,4 +58,3 @@ self.addEventListener('fetch', event => {
     }
 });
 
-//Update SW
