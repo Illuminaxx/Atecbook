@@ -1,4 +1,7 @@
-var CACHE_NAME = "ATEC-Book-PWA";
+var doCache = true;
+
+var CACHE_NAME = "atec-book-cache";
+
 var urlsToCache = [
     '/static/js/2.c734d9ec.chunk.js',
     '/static/js/main.87706e13.chunk.js',
@@ -7,47 +10,48 @@ var urlsToCache = [
     'logo192.png',
     'logo256.png',
     'logo384.png',
-    'logo512.png'
+    'logo512.png',
+    '/'
     
 ];
 
 
 // Install SW
 self.addEventListener('install', (event) => {
-    event.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => {
-            return cache.addAll(urlsToCache);
-        })
-    )
+    if(doCache) {
+        event.waitUntil(
+            caches.open(CACHE_NAME)
+            .then(function (cache) {
+                cache.addAll(urlsToCache)
+            })
+        );
+    }
 });
 
 self.addEventListener('activate', (event) => {
-    var cacheWhitelist = ['wms-pwa'];
+    const cacheWhitelist = [CACHE_NAME];
     event.waitUntil(
-        caches.keys().then(function(cacheNames)  {
-            return Promise.all(
-                cacheNames.map((cacheName) => {
-                    if (cacheWhitelist.indexOf(cacheName) === -1) {
-                        return caches.delete(cacheName);
-                    }
-                })
-            );
-        })
+        caches.keys()
+            .then(keyList => 
+                Promise.all(keyList.map(key => {
+                        if(!cacheWhitelist.includes(key)) {
+                            console.log('Deleting cache: ' + key)
+                            return caches.delete(key)
+                        }
+                }))
+            )
     );
 });
 
 // Cache and requests returned
 self.addEventListener('fetch', event => {
-    event.respondWith(
-        caches.match(event.request)
-        .then((response) => {
-            if(response) {
-                return response;
-            }
-
-            return fetch(event.request);
-        })
-    );
+    if(doCache) {
+        event.respondWith(
+            caches.match(event.request).then(function(response) {
+                return response || fetch(event.request)
+            })
+        );
+    }
 });
 
 //Update SW
