@@ -6,7 +6,7 @@
   "description": "Social network for a Atecna Company",
   "display": "standalone",
   "scope": "/",
-  "start_url": "/",
+  "start_url": "https://atecbook.herokuapp.com/",
   "icons": [
     {
       "src": "favicon.ico",
