@@ -1,9 +1,9 @@
-var CACHE_NAME = "ATEC'Book-PWA";
+var CACHE_NAME = "ATEC-Book-PWA";
 var urlsToCache = [
     '/static/js/2.c734d9ec.chunk.js',
     '/static/js/main.87706e13.chunk.js',
     '/static/js/runtime-main.c012fedc.js',
-    '/favicon.ico',
+    'favicon.ico',
     'logo192.png',
     'logo256.png',
     'logo384.png',
