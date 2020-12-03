@@ -8,6 +8,7 @@ var urlsToCache = [
     'logo256.png',
     'logo384.png',
     'logo512.png',
+    'https://atecbook.herokuapp.com/'
     
 ];
 
