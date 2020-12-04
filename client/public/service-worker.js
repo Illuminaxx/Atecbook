@@ -15,6 +15,7 @@ var urlsToCache = [
     'logo384.png',
     'logo512.png',
     'manifest.json',
+    'service-worker.js',
     '/'
     
 ];
