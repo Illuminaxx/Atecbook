@@ -9,8 +9,6 @@ var urlsToCache = [
     '/static/js/runtime-main.c012fedc.js',
     '/static/media/logo.5e3be87f.svg',
     '/static/media/showcase.36c4bd33.jpg',
-    '/static/js/2.86c0399e.chunk.js',
-    '/static/js/main.2481c962.chunk.js',
     'favicon.ico',
     'logo192.png',
     'logo256.png',
