@@ -33,9 +33,9 @@ if(localStorage.token) {
 }
 
 export default function App() {
-  useEffect(() => {
+  /*useEffect(() => {
     store.dispatch(loadUser())
-  }, [])
+  }, [])*/
   return (
     <Provider store={store}>
       <Router>
