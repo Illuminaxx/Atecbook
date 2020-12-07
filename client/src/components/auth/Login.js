@@ -16,7 +16,7 @@ export const Login = ({ login, isAuthenticated }) => {
   }
 
   async function onSubmit(e) {
-    console.log("submited");
+    //console.log("submited");
     e.preventDefault();
     login(email, password);
   }
