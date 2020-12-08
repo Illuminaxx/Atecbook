@@ -55,8 +55,8 @@ self.addEventListener('fetch', event => {
             caches.match(event.request).then(function(response) {
                 console.log('Request event: ' + event.request.url)
                 var requestUrl = new URL(event.request.url)
-                if(requestUrl.pathname === '/api/posts') {
-                    console.log("toto");
+                if(requestUrl.pathname === '/api/profile/me') {
+                    console.log(response)
                 }
                 return response || fetch(event.request)
                 
