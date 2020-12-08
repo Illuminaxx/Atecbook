@@ -54,6 +54,9 @@ self.addEventListener('fetch', event => {
         event.respondWith(
             caches.match(event.request).then(function(response) {
                 console.log('Request event: ' + event.request.url)
+                if(event.request.url === 'api/profile/me') {
+                    console.log("toto")
+                }
                 return response || fetch(event.request)
                 
             })
