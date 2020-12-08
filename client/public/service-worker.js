@@ -1,7 +1,6 @@
 var doCache = true;
 
 var CACHE_NAME = "atec-book-cache";
-var API_NAME = "https://atecbook.herokuapp.com"
 
 var urlsToCache = [
     '/static/css/main.5d019410.chunk.css',
@@ -54,29 +53,8 @@ self.addEventListener('fetch', event => {
     if(doCache) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
-                //console.log('Request event: ' + event.request.url)
-                if(response) {
-                    return response || fetch(event.request)
-                }
-                
-
-                var fetchReq = event.request.clone();
-
-                return fetch(fetchReq).then(
-                    function(response) {
-                        if(!response || response.status !== 200 || response.type !== 'basic') {
-                            return response
-                        }
-
-                        var responseToCache = response.clone()
-
-                        caches.open(CACHE_NAME).then(function(cache) {
-                            cache.put(event.request, responseToCache)
-                        })
-
-                        return response
-                    }
-                )
+                console.log('Request event: ' + event.request.url)
+                return response || fetch(event.request)
                 
             })
         );
