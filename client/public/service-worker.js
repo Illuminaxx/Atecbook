@@ -56,7 +56,7 @@ self.addEventListener('fetch', event => {
                 console.log('Request event: ' + event.request.url)
                 var requestUrl = new URL(event.request.url)
                 if(requestUrl.pathname === '/api/profile/me') {
-                    console.log(response)
+                    console.log(event.request)
                 }
                 return response || fetch(event.request)
                 
