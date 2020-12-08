@@ -9,6 +9,7 @@ var urlsToCache = [
     '/static/js/runtime-main.c012fedc.js',
     '/static/media/logo.5e3be87f.svg',
     '/static/media/showcase.36c4bd33.jpg',
+    'https://kit.fontawesome.com/4276cb84f0.js',
     'favicon.ico',
     'logo192.png',
     'logo256.png',
