@@ -30,7 +30,6 @@
     "uuid": "^8.3.1"
   },
   "devDependencies": {
-    "compression": "^1.7.4",
     "concurrently": "^5.3.0",
     "nodemon": "^2.0.6"
   }
