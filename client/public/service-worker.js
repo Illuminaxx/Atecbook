@@ -54,11 +54,19 @@ self.addEventListener('fetch', event => {
     if(doCache) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
-                console.log('Request event: ' + event.request.url)
-                if(event.request.url === `${API_NAME}/api/profile/me`) {
-                    console.log("toto")
+                //console.log('Request event: ' + event.request.url)
+                if(response) {
+                    return response || fetch(event.request)
                 }
-                return response || fetch(event.request)
+                
+
+                var fetchReq = event.request.clone();
+
+                return fetch(fetchReq).then(
+                    function(response) {
+                        console.log(response)
+                    }
+                )
                 
             })
         );
