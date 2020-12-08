@@ -1,6 +1,7 @@
 var doCache = true;
 
 var CACHE_NAME = "atec-book-cache";
+var API_NAME = "https://atecbook.herokuapp.com"
 
 var urlsToCache = [
     '/static/css/main.5d019410.chunk.css',
@@ -54,7 +55,7 @@ self.addEventListener('fetch', event => {
         event.respondWith(
             caches.match(event.request).then(function(response) {
                 console.log('Request event: ' + event.request.url)
-                if(event.request.url === '/api/profile/me') {
+                if(event.request.url === `${API_NAME}/api/profile/me`) {
                     console.log("toto")
                 }
                 return response || fetch(event.request)
