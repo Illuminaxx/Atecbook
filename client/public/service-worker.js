@@ -55,6 +55,9 @@ self.addEventListener('fetch', event => {
                 //console.log('Request event: ' + event.request.url)
                 let requestUrl = new URL(event.request.url)
                 console.log(event.request)
+                if(event.request === 'POST') {
+                    console.log('Ceci est un post !')
+                }
 
                 return response || fetch(event.request)
                 
