@@ -72,7 +72,17 @@ self.addEventListener('fetch', function(e) {
 
             return fetch(fetchReq).then(
                 function(response) {
-                    console.log(response)
+                    if(!response || response.status !== 200) {
+                        return response
+                    }
+
+                    var responseToCache = response.clone();
+                    console.log(responseToCache)
+                    caches.open(CACHE_NAME)
+                    .then(function(cache) {
+                        cache.put(fetchReq, responseToCache);         
+                    });
+                    return response;
                 }
             )
         })
