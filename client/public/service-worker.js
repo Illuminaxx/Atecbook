@@ -97,7 +97,7 @@ self.addEventListener('fetch', function(e) {
         )
     } else {
         e.respondWith(
-            caches.open('cache-test').then(function(cache) {
+            caches.open(CACHE_NAME).then(function(cache) {
                 return cache.match(e.request).then(function(response) {
                     let fetchPromise = fetch(e.request).then(function(networkResponse) {
                         cache.put(e.request, networkResponse.clone())
