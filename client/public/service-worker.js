@@ -65,7 +65,7 @@ self.addEventListener('activate', (event) => {
     }
 });*/
 self.addEventListener('fetch', function(e) {
-    e.respondWith(
+    /*e.respondWith(
         caches.match(e.request).then(function(response) {
             if(response) { return response }
 
@@ -87,5 +87,24 @@ self.addEventListener('fetch', function(e) {
                 }
             )
         })
-    )
+    )*/
+    let requestUrl = new URL(e.request.url)
+    if(requestUrl.origin == location.origin) {
+        e.respondWith(
+            fetch(e.request).catch(function() {
+                return caches.match(e.request)
+            })
+        )
+    } else {
+        e.respondWith(
+            caches.open('cache-test').then(function(cache) {
+                return cache.match(e.request).then(function(response) {
+                    let fetchPromise = fetch(e.request).then(function(networkResponse) {
+                        cache.put(e.request, networkResponse.clone())
+                    })
+                    return response || fetchPromise
+                })
+            })
+        )
+    }
 })
