@@ -53,9 +53,12 @@ self.addEventListener('fetch', event => {
     if(doCache) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
-                console.log('Request event: ' + event.request.url)
+                //console.log('Request event: ' + event.request.url)
                 let requestUrl = new URL(event.request.url)
                 console.log(requestUrl)
+                console.log(requestUrl.origin)
+                console.log(location.origin)
+
                 return response || fetch(event.request)
                 
             })
