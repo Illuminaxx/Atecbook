@@ -49,7 +49,7 @@ self.addEventListener('activate', (event) => {
 });
 
 // Cache and requests returned
-self.addEventListener('fetch', event => {
+/*self.addEventListener('fetch', event => {
     if(doCache) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
@@ -62,5 +62,15 @@ self.addEventListener('fetch', event => {
             })
         );
     }
-});
+});*/
+self.addEventListener('fetch', function(e) {
+    e.respondWith(
+        caches.match(e.request).then(function(response) {
+            if(response) { return response }
 
+            var fetchReq = e.request.clone();
+
+            console.log(fetchReq)
+        })
+    )
+})
