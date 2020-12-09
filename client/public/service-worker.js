@@ -56,6 +56,7 @@ self.addEventListener('fetch', event => {
                 //console.log('Request event: ' + event.request.url)
                 let requestUrl = new URL(event.request.url)
                 console.log(requestUrl)
+                console.log(requestUrl.pathname)
 
                 return response || fetch(event.request)
                 
