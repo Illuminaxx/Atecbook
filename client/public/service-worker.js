@@ -1,6 +1,7 @@
 var doCache = true;
 
 var CACHE_NAME = "atec-book-cache";
+var CACHE_DATA = "atec-book-cache-data";
 
 var urlsToCache = [
     '/static/css/main.5d019410.chunk.css',
@@ -78,9 +79,9 @@ self.addEventListener('fetch', function(e) {
 
                     var responseToCache = response.clone();
                     console.log(responseToCache)
-                    caches.open(CACHE_NAME)
+                    caches.open(CACHE_DATA)
                     .then(function(cache) {
-                        cache.put(fetchReq, responseToCache);         
+                        cache.put(e.request, responseToCache);         
                     });
                     return response;
                 }
