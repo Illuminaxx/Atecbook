@@ -17,9 +17,7 @@ var urlsToCache = [
     'logo512.png',
     'manifest.json',
     'service-worker.js',
-    '/',
-    '/api/*'
-    
+    '/'
 ];
 
 
@@ -50,7 +48,7 @@ self.addEventListener('activate', (event) => {
 });
 
 // Cache and requests returned
-/*self.addEventListener('fetch', event => {
+self.addEventListener('fetch', event => {
     if(doCache) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
@@ -63,48 +61,5 @@ self.addEventListener('activate', (event) => {
             })
         );
     }
-});*/
-self.addEventListener('fetch', function(e) {
-    /*e.respondWith(
-        caches.match(e.request).then(function(response) {
-            if(response) { return response }
+});
 
-            var fetchReq = e.request.clone();
-
-            return fetch(fetchReq).then(
-                function(response) {
-                    if(!response || response.status !== 200) {
-                        return response
-                    }
-
-                    var responseToCache = response.clone();
-                    console.log(responseToCache)
-                    caches.open(CACHE_NAME)
-                    .then(function(cache) {
-                        cache.put(e.request, responseToCache);         
-                    });
-                    return response;
-                }
-            )
-        })
-    )*/
-    let requestUrl = new URL(e.request.url)
-    if(requestUrl.origin == location.origin) {
-        e.respondWith(
-            fetch(e.request).catch(function() {
-                return caches.match(e.request)
-            })
-        )
-    } else {
-        e.respondWith(
-            caches.open(CACHE_NAME).then(function(cache) {
-                return cache.match(e.request).then(function(response) {
-                    let fetchPromise = fetch(e.request).then(function(networkResponse) {
-                        cache.put(e.request, networkResponse.clone())
-                    })
-                    return response || fetchPromise
-                })
-            })
-        )
-    }
-})
