@@ -70,7 +70,11 @@ self.addEventListener('fetch', function(e) {
 
             var fetchReq = e.request.clone();
 
-            console.log(fetchReq)
+            return fetch(fetchReq).then(
+                function(response) {
+                    console.log(response)
+                }
+            )
         })
     )
 })
