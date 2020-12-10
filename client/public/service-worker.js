@@ -57,7 +57,8 @@ self.addEventListener('fetch', event => {
                 console.log(event.request)
                 console.log(requestUrl)
                 if(event.request.method === 'POST') {
-                    console.log('Ceci est un post !')
+                    // caches.put(response)
+                    console.log(response)
                 }
 
                 return response || fetch(event.request)
