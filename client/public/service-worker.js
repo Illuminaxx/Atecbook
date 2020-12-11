@@ -54,8 +54,8 @@ self.addEventListener('fetch', event => {
             caches.match(event.request).then(function(response) {
                 //console.log('Request event: ' + event.request.url)
                 let requestUrl = new URL(event.request.url)
-                console.log('Request event : ' + JSON.parse(event.request))
-                console.log('URL' + requestUrl)
+                console.log('Request event : ' + event.request.method)
+                console.log('URL : ' + requestUrl)
                 return response || fetch(event.request)
                 
             })
