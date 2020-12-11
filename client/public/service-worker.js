@@ -52,7 +52,7 @@ self.addEventListener('fetch', event => {
     if(doCache) {
         event.respondWith(
             caches.match(event.request).then(function(response) {
-                console.log('Request event: ' + event.request)
+                console.log('Request event: ' + event.request.url)
                 return response || fetch(event.request)
                 
             })
