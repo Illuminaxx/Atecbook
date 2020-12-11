@@ -1,4 +1,4 @@
-//self.importScripts("https://unpkg.com/dexie@latest/dist/dexie.js");
+
 
 var doCache = true;
 var CACHE_NAME = "atec-book-cache";
@@ -50,6 +50,7 @@ self.addEventListener('activate', (event) => {
 // Cache and requests returned
 self.addEventListener('fetch', event => {
     if(doCache) {
+        
         event.respondWith(
             caches.match(event.request).then(function(response) {
                 //console.log('Request event: ' + event.request.url)
@@ -59,6 +60,7 @@ self.addEventListener('fetch', event => {
         );
 
         if(event.request.method === "POST") {
+            importScripts("./dist/js/dexie.js");
             var database = new Dexie("req_cache");
             database.version(1).stores({
                 req_cache: 'key,response,timestamp'
