@@ -53,10 +53,16 @@ self.addEventListener('fetch', event => {
         event.respondWith(
             caches.match(event.request).then(function(response) {
                 //console.log('Request event: ' + event.request.url)
-                let requestUrl = new URL(event.request.url)
-                console.log('Request event : ' + event.request.method)
-                console.log('URL : ' + requestUrl)
-                return response || fetch(event.request)
+                // return response || fetch(event.request)
+                if(response) { return response; }
+
+                var fetchReq = event.request.clone()
+
+                return fetch(fetchReq).then(
+                    function(response) {
+                        console.log(response)
+                    }
+                )
                 
             })
         );
