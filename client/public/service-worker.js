@@ -1,4 +1,4 @@
-self.importScripts("https://unpkg.com/dexie@latest/dist/dexie.js");
+//self.importScripts("https://unpkg.com/dexie@latest/dist/dexie.js");
 
 var doCache = true;
 var CACHE_NAME = "atec-book-cache";
