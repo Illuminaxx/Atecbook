@@ -1,4 +1,4 @@
-
+self.importScripts('./dist/js/dexie.js')
 
 var doCache = true;
 var CACHE_NAME = "atec-book-cache";
@@ -60,7 +60,7 @@ self.addEventListener('fetch', event => {
         );
 
         if(event.request.method === "POST") {
-            importScripts("./dist/js/dexie.js");
+            
             var database = new Dexie("req_cache");
             database.version(1).stores({
                 req_cache: 'key,response,timestamp'
