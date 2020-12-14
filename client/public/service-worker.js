@@ -205,6 +205,6 @@ function cacheMatch(request, store) {
 * @param request
 * @return string
 */
-public static function getPostId(request)  {
+public function getPostId(request)  {
 	return JSON.stringify(serializeRequest(request.clone()));
 }
