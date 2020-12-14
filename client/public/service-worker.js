@@ -59,7 +59,7 @@ self.addEventListener('fetch', event => {
                 return response || fetch(event.request)
                 
             })
-        );*/
+        );
 
         if(event.request.method === "POST") {
             
@@ -78,6 +78,31 @@ self.addEventListener('fetch', event => {
                 })
             )
 
+        }*/
+
+        if(event.request.method === "POST"){
+		
+            // Init the cache. We use Dexie here to simplify the code. You can use any other
+            // way to access IndexedDB of course.
+            var db = new Dexie("post_cache");
+            db.version(1).stores({
+                post_cache: 'key,response,timestamp'
+            })
+        
+            event.respondWith(
+                // First try to fetch the request from the server
+                fetch(event.request.clone())
+                .then(function(response) {
+                    // If it works, put the response into IndexedDB
+                    cachePut(event.request.clone(), response.clone(), db.post_cache);
+                    return response;
+                })
+                .catch(function() {
+                    // If it does not work, return the cached response. If the cache does not
+                    // contain a response for our request, it will give us a 503-response
+                    return cacheMatch(event.request.clone(), db.post_cache);
+                })
+            );
         }
 
     }
