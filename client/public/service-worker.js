@@ -60,7 +60,7 @@ self.addEventListener('fetch', event => {
             })
         );
 
-        /*if(event.request.method === "POST") {
+        if(event.request.method === "POST") {
             
             var database = new Dexie("req_cache");
             database.version(1).stores({
@@ -77,7 +77,7 @@ self.addEventListener('fetch', event => {
                 })
             )
 
-        }*/
+        }
 
     }
 });
