@@ -186,7 +186,7 @@ function cachePut(request, response, store) {
 * @return Promise
 */
 function cacheMatch(request, store) {
-    return getPostId(request.clone())
+    getPostId(request.clone())
     .then(function(id) {
         return store.get(id)
     }).then(function(data) {
