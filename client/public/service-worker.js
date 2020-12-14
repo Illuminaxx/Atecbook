@@ -51,8 +51,6 @@ self.addEventListener('activate', (event) => {
 // Cache and requests returned
 self.addEventListener('fetch', event => {
     if(doCache) {
-        
-
 
         if(event.request.method === "POST") {
             
@@ -206,6 +204,6 @@ function cacheMatch(request, store) {
 * @param request
 * @return string
 */
-function getPostId(request) {
+var getPostId = (function(request) {
 	return JSON.stringify(serializeRequest(request.clone()));
-}
+})
