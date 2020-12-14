@@ -51,7 +51,7 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', event => {
     if(doCache) {
         
-        event.respondWith(
+        /*event.respondWith(
             caches.match(event.request).then(function(response) {
                 // console.log('Request event: ' + event)
                 let reqUrl = new URL(event.request.url)
@@ -59,9 +59,9 @@ self.addEventListener('fetch', event => {
                 return response || fetch(event.request)
                 
             })
-        );
+        );*/
 
-        /*if(event.request.method === "POST") {
+        if(event.request.method === "POST") {
             
             var database = new Dexie("req_cache");
             database.version(1).stores({
@@ -78,7 +78,7 @@ self.addEventListener('fetch', event => {
                 })
             )
 
-        }*/
+        }
 
     }
 });
