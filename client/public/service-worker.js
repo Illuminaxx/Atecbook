@@ -52,13 +52,7 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', event => {
     if(doCache) {
         
-        event.respondWith(
-            caches.match(event.request).then(function(response) {
-                //console.log('Request event: ' + event.request.url)
-                return response || fetch(event.request)
-                
-            })
-        );
+
 
         if(event.request.method === "POST") {
             
@@ -77,6 +71,14 @@ self.addEventListener('fetch', event => {
                 })
             )
 
+        } else {
+            event.respondWith(
+                caches.match(event.request).then(function(response) {
+                    //console.log('Request event: ' + event.request.url)
+                    return response || fetch(event.request)
+                    
+                })
+            );
         }
 
     }
