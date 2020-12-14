@@ -162,7 +162,8 @@ function deserializeResponse(data) {
 */
 function cachePut(request, response, store) {
     var key, data;
-    getPostId(request.clone()).then(function(id) {
+    return getPostId(request.clone()).
+    then(function(id) {
         key = id;
         return serializeResponse(response.clone())
     }).then(function(serializedResponse) {
