@@ -54,7 +54,7 @@ self.addEventListener('fetch', event => {
         event.respondWith(
             caches.match(event.request).then(function(response) {
                 //console.log('Request event: ' + event.request.url)
-                console.log(event.request.url.href);
+                console.log(event.request.url);
                 return response || fetch(event.request)
                 
             })
