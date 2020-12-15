@@ -211,6 +211,6 @@ function cacheMatch(request, store) {
 /*var getPostId = (function(request) {
 	return JSON.stringify(serializeRequest(request.clone()));
 })*/
-export default function getPostId(request) {
+export function getPostId(request) {
     return JSON.stringify(serializeRequest(request.clone()));
 }
