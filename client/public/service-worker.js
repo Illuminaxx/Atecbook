@@ -1,3 +1,5 @@
+const { request } = require("express");
+
 self.importScripts('./dist/js/dexie.js')
 
 var doCache = true;
@@ -52,6 +54,16 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', event => {
     if(doCache) {
 
+        if(event.request.method === "GET") {
+            event.respondWith(
+                caches.match(event.request).then(function(response) {
+                    //console.log('Request event: ' + event.request.url)
+                    return response || fetch(event.request)
+                    
+                })
+            );
+        }
+
         if(event.request.method === "POST") {
             
             var database = new Dexie("req_cache");
@@ -70,13 +82,7 @@ self.addEventListener('fetch', event => {
             )
 
         } else {
-            event.respondWith(
-                caches.match(event.request).then(function(response) {
-                    //console.log('Request event: ' + event.request.url)
-                    return response || fetch(event.request)
-                    
-                })
-            );
+            
         }
 
     }
@@ -186,9 +192,10 @@ function cachePut(request, response, store) {
 * @return Promise
 */
 function cacheMatch(request, store) {
-    this.getPostId(request.clone())
+    getPostId(request.clone())
     .then(function(id) {
-        return store.get(id)
+        console.log(id)
+        //return store.get(id)
     }).then(function(data) {
         if (data) {
 			return deserializeResponse(data.response);
