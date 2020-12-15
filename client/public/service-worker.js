@@ -191,7 +191,7 @@ function cachePut(request, response, store) {
 */
 function cacheMatch(request, store) {
 	return getPostId(request.clone())
-	.then(function(id) {
+	/*.then(function(id) {
 		return store.get(id);
 	}).then(function(data){
 		if (data) {
@@ -199,7 +199,7 @@ function cacheMatch(request, store) {
 		} else {
 			return new Response('', {status: 503, statusText: 'Service Unavailable'});
 		}
-	});
+	});*/
 }
 
 /**
