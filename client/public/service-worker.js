@@ -1,5 +1,3 @@
-const { request } = require("express");
-
 self.importScripts('./dist/js/dexie.js')
 
 var doCache = true;
@@ -211,6 +209,9 @@ function cacheMatch(request, store) {
 * @param request
 * @return string
 */
-var getPostId = (function(request) {
+/*var getPostId = (function(request) {
 	return JSON.stringify(serializeRequest(request.clone()));
-})
+})*/
+function getPostId(request) {
+    return JSON.stringify(serializeRequest(request.clone()));
+}
