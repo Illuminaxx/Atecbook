@@ -22,7 +22,6 @@ var urlsToCache = [
 ];
 
 
-var CACHE_REQUEST = ;
 var DB_VERSION = 1
 
 // Install SW
