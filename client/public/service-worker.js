@@ -73,11 +73,11 @@ self.addEventListener('fetch', event => {
 
             event.respondWith(
                 fetch(event.request.clone()).then(function(response) {
-                    cachePut(event.request.clone(), response.clone(), database.req_cache)
+                    cachePut(event.request.clone(), response.clone(), database.atecbook_request_cache)
                     return response
                 })
                 .catch(function() {
-                    return cacheMatch(event.request.clone(), database.req_cache)
+                    return cacheMatch(event.request.clone(), database.atecbook_request_cache)
                 })
             )
 
