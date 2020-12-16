@@ -2,6 +2,8 @@ self.importScripts('./dist/js/dexie.js')
 
 var doCache = true;
 var CACHE_NAME = "atec-book-cache";
+var CACHE_REQUEST = "atecbook-request-cache";
+var VERSION = 1;
 var urlsToCache = [
     '/static/css/main.5d019410.chunk.css',
     '/static/js/2.86c0399e.chunk.js',
@@ -62,10 +64,10 @@ self.addEventListener('fetch', event => {
             );
         }
 
-        if(event.request.method === "POST") {
+        if(event.request.method === "POST" || event.request.method === "PUT") {
             
-            var database = new Dexie("req_cache");
-            database.version(1).stores({
+            var database = new Dexie(CACHE_REQUEST);
+            database.version(VERSION).stores({
                 req_cache: 'key,response,timestamp'
             })
 
@@ -79,9 +81,7 @@ self.addEventListener('fetch', event => {
                 })
             )
 
-        } else {
-            
-        }
+        } 
 
     }
 });
@@ -165,7 +165,7 @@ function deserializeResponse(data) {
 */
 function cachePut(request, response, store) {
     var key, data;
-    getPostId(request.clone()).then(function(id) {
+    return getPostId(request.clone()).then(function(id) {
         key = id;
         return serializeResponse(response.clone())
     }).then(function(serializedResponse) {
