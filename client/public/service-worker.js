@@ -2,8 +2,6 @@ self.importScripts('./dist/js/dexie.js')
 
 var doCache = true;
 var CACHE_NAME = "atec-book-cache";
-var CACHE_REQUEST = "atecbook-request-cache";
-var VERSION = 1;
 var urlsToCache = [
     '/static/css/main.5d019410.chunk.css',
     '/static/js/2.86c0399e.chunk.js',
@@ -66,8 +64,8 @@ self.addEventListener('fetch', event => {
 
         if(event.request.method === "POST" || event.request.method === "PUT") {
             
-            var database = new Dexie(CACHE_REQUEST);
-            database.version(VERSION).stores({
+            var database = new Dexie("atecbook-request-cache");
+            database.version(1).stores({
                 req_cache: 'key,response,timestamp'
             })
 
