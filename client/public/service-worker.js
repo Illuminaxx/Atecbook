@@ -1,3 +1,6 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable no-undef */
+/* eslint-disable no-restricted-globals */
 self.importScripts('./dist/js/dexie.js')
 
 var doCache = true;
@@ -20,7 +23,6 @@ var urlsToCache = [
     'service-worker.js',
     '/'
 ];
-
 var CACHE_REQUEST = "atecbook-request-cache"
 var DB_VERSION = 1
 
@@ -64,7 +66,7 @@ self.addEventListener('fetch', event => {
             );
         }
 
-        console.log(event.request.method);
+        console.log(event.request.url.href);
 
         if(event.request.method === "POST") {
             
