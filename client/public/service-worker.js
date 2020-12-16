@@ -22,7 +22,7 @@ var urlsToCache = [
 ];
 
 
-var CACHE_REQUEST = "atecbook-request-cache";
+var CACHE_REQUEST = ;
 var DB_VERSION = 1
 
 // Install SW
@@ -67,9 +67,9 @@ self.addEventListener('fetch', event => {
 
         if(event.request.method === "PUT" || event.request.method === "POST") {
             
-            var database = new Dexie(CACHE_REQUEST);
+            var database = new Dexie("atecbook-request-cache");
             database.version(DB_VERSION).stores({
-                CACHE_REQUEST: 'key,response,timestamp'
+                atecbook_request_cache: 'key,response,timestamp'
             })
 
             event.respondWith(
