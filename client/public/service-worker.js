@@ -181,7 +181,7 @@ function cachePut(request, response, store) {
             timestamp: Date.now()
         }
         store
-            .addAll(entry)
+            .add(entry)
             .catch(function(error) {
                 store.update(entry.key, entry)
             })
