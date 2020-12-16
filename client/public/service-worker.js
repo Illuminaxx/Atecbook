@@ -70,7 +70,7 @@ self.addEventListener('fetch', event => {
             
             var database = new Dexie(CACHE_REQUEST);
             database.version(DB_VERSION).stores({
-                CACHE_REQUEST: 'key,response,timestamp'
+                atecbook_request_cache: 'key,response,timestamp'
             })
 
             event.respondWith(
