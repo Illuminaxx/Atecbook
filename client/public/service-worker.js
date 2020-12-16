@@ -62,7 +62,7 @@ self.addEventListener('fetch', event => {
             );
         }
 
-        if(event.request.method === "POST" || event.request.method === "PUT") {
+        if(event.request.method === "PUT") {
             
             var database = new Dexie("atecbook-request-cache");
             database.version(1).stores({
