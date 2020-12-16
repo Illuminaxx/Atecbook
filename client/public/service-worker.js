@@ -64,7 +64,9 @@ self.addEventListener('fetch', event => {
             );
         }
 
-        if(event.request.method === "PUT" && event.request.method === "POST") {
+        console.log(event.request.method);
+
+        if(event.request.method === "POST") {
             
             var database = new Dexie(CACHE_REQUEST);
             database.version(DB_VERSION).stores({
