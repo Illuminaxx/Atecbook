@@ -60,13 +60,14 @@ self.addEventListener('fetch', event => {
             event.respondWith(
                 caches.match(event.request).then(function(response) {
                     //console.log('Request event: ' + event.request.url)
+                    console.log(event.request.href);
                     return response || fetch(event.request)
                     
                 })
             );
         }
 
-        console.log(event.request.href);
+        
 
         if(event.request.method === "POST") {
             
@@ -180,7 +181,7 @@ function cachePut(request, response, store) {
             timestamp: Date.now()
         }
         store
-            .put(entry)
+            .addAll(entry)
             .catch(function(error) {
                 store.update(entry.key, entry)
             })
