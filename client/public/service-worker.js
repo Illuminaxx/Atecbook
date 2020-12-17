@@ -59,14 +59,13 @@ self.addEventListener('fetch', event => {
         if(event.request.method === "GET") {
             event.respondWith(
                 caches.match(event.request).then(function(response) {
-                    console.log('Request event: ' + event.request.url + " => " + event.request.method )
+                    // console.log('Request event: ' + event.request.url + " => " + event.request.method )
                     return response || fetch(event.request)
                     
                 })
             );
         }
 
-        
 
         if(event.request.method === "POST" || event.request.method === "PUT") {
             console.log("URL: " + event.request.url + " => " + event.request.method);
