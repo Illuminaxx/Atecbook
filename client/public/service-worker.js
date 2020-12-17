@@ -59,7 +59,7 @@ self.addEventListener('fetch', event => {
         if(event.request.method === "GET") {
             event.respondWith(
                 caches.match(event.request).then(function(response) {
-                    //console.log('Request event: ' + event.request.url)
+                    console.log('Request event: ' + event.request.url + " => " + event.request.method )
                     return response || fetch(event.request)
                     
                 })
@@ -68,8 +68,8 @@ self.addEventListener('fetch', event => {
 
         
 
-        if(event.request.method === "POST") {
-            console.log("URL: " + event.request.url + "=> " + event.request.method);
+        if(event.request.method === "POST" || event.request.method === "PUT") {
+            console.log("URL: " + event.request.url + " => " + event.request.method);
             var database = new Dexie(CACHE_REQUEST);
             database.version(DB_VERSION).stores({
                 atecbook_request_cache: 'key,response,timestamp'
