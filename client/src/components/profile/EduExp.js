@@ -23,7 +23,7 @@ export default function ProfileAbout({ profile }) {
           profile.education.map((edu, index) => (
             <div>
               <h3>{edu.school}</h3>
-              <p>Sep 1993 - June 1999</p>
+              <p>{edu.from} - {edu.to}}</p>
               <p>
                 <strong>Degree: </strong>
                 {edu.degree}
@@ -33,10 +33,8 @@ export default function ProfileAbout({ profile }) {
                 {edu.fieldofstudy}
               </p>
               <p>
-                <strong>Description: </strong>Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Dignissimos placeat, dolorum ullam
-                ipsam, sapiente suscipit dicta eius velit amet aspernatur
-                asperiores modi quidem expedita fugit.
+                <strong>Description: </strong>
+                {edu.description}
               </p>
             </div>
           ))}
