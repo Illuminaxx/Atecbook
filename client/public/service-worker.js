@@ -73,7 +73,7 @@ self.addEventListener('fetch', event => {
             //console.log(event)
             console.log("URL: " + event.request.url + " => " + event.request.method);
 
-            if(requestURL.href.match('/api/auth', '/api/posts')) {
+            if(requestURL.href.match('/api/auth') || requestURL.href.match('/api/auth')) {
                 console.log('authentication request')
             }
 
