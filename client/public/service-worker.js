@@ -70,7 +70,7 @@ self.addEventListener('fetch', event => {
         if(event.request.method === "POST" || event.request.method === "PUT") {
             let requestURL = new URL(event.request.url);
             console.log(requestURL);
-            console.log(event.request.pathname)
+            console.log(event.request.url.pathname)
             console.log("URL: " + event.request.url + " => " + event.request.method);
             var database = new Dexie(CACHE_REQUEST);
             database.version(DB_VERSION).stores({
