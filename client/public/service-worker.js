@@ -73,11 +73,11 @@ self.addEventListener('fetch', event => {
             //console.log(event)
             console.log("URL: " + event.request.url + " => " + event.request.method);
 
-            if(requestURL.href.match('/api/auth', '/api/posts')) {
+            if(requestURL.href.match(['/api/auth', '/api/posts'])) {
                 console.log('authentication request')
             }
 
-            
+
             var database = new Dexie(CACHE_REQUEST);
             database.version(DB_VERSION).stores({
                 atecbook_request_cache: 'key,response,timestamp'
