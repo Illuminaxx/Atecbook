@@ -73,7 +73,7 @@ self.addEventListener('fetch', event => {
             //console.log(event)
             console.log("URL: " + event.request.url + " => " + event.request.method);
 
-            if(requestURL.href.match('/api/*') || requestURL.href.match('/api/posts')) {
+            if(requestURL.href.match('/api/*')) {
                 console.log('authentication request')
             }
 
@@ -178,7 +178,7 @@ function deserializeResponse(data) {
 function cachePut(request, response, store) {
     var key, data;
     getPostId(request.clone()).then(function(id) {
-        key = id;
+        key = request.clone();
         return serializeResponse(response.clone())
     }).then(function(serializedResponse) {
         data = serializedResponse;
