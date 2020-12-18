@@ -4,12 +4,12 @@ export default function ProfileAbout({ profile }) {
   return (
     <>
       <div className="profile-exp bg-white p-2">
-        <h2 className="text-primary">&Eacute;xperiences</h2>
+        <h2 className="text-primary">Experiences</h2>
         {profile.experience != null &&
           profile.experience.map((exp, index) => (
             <div key={index}>
               <h3 className="text-dark">{exp.company}</h3>
-              <p>Oct 2011 - Current</p>
+              <p>{exp.from} - {exp.to}</p>
               <p>
                 <strong>Position: </strong>
                 {exp.title}
