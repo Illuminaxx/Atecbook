@@ -69,9 +69,9 @@ self.addEventListener('fetch', event => {
 
         if(event.request.method === "POST" || event.request.method === "PUT") {
             let requestURL = new URL(event.request.url);
-            console.log(requestURL);
+            //console.log(requestURL);
             //console.log(event)
-            console.log("URL: " + event.request.url + " => " + event.request.method);
+            // console.log("URL: " + event.request.url + " => " + event.request.method);
 
             if(requestURL.href.match('/api/*')) {
                 console.log('authentication request')
