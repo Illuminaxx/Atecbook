@@ -13,6 +13,9 @@ var urlsToCache = [
     '/static/media/logo.5e3be87f.svg',
     '/static/media/showcase.36c4bd33.jpg',
     'https://kit.fontawesome.com/4276cb84f0.js',
+    'https://ka-f.fontawesome.com/releases/v5.15.1/webfonts/free-fa-solid-900.woff2',
+    'https://cdn.loom.com/assets/fonts/circular/CircularXXWeb-Book-cd7d2bcec649b1243839a15d5eb8f0a3.woff2',
+    'https://ka-f.fontawesome.com/releases/v5.15.1/webfonts/free-fa-brands-400.woff2',
     '/dist/js/dexie.js',
     'favicon.ico',
     'logo192.png',
@@ -70,7 +73,7 @@ self.addEventListener('fetch', event => {
         if(event.request.method === "POST" || event.request.method === "PUT") {
             let requestURL = new URL(event.request.url);
             //console.log(requestURL);
-            //console.log(event)
+            console.log(JSON.stringify({event}))
             // console.log("URL: " + event.request.url + " => " + event.request.method);
 
             if(requestURL.href.match('/api/*')) {
