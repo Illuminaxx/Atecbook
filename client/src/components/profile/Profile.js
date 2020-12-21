@@ -21,7 +21,7 @@ const Profile = ({
     <>
       <>
         <Link to="/profiles" className="btn btn-light">
-        Retour aux profils
+          Retour aux profils
         </Link>
         {user !== null && user._id === match.params.id ? (
           <Link to="/edit-profile" className="btn btn-light">

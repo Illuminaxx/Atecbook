@@ -13,7 +13,7 @@ const Landing = ({ isAuthenticated }) => {
         <div className="landing-inner">
           <h1 className="x-large">ATEC'book</h1>
           <p className="lead">
-          La réussite de votre transformation digitale
+            La réussite de votre transformation digitale
           </p>
           <div className="buttons">
             <Link to="/register" className="btn btn-primary">
