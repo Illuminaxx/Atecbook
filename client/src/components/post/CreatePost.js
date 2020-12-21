@@ -44,7 +44,6 @@ function CreatePost({ addPost }) {
 CreatePost.proptype = {
   addPost: PropTypes.func.isRequired
 };
-// const mapStateToProps = state => ({});
 
 const mapDispatchToProps = {
   addPost: addPost

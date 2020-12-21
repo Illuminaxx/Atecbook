@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import { setAuthToken } from "./utility/addAuthHeader"
-import { loadUser } from "./actions/auth"
-import React, {useEffect} from "react"
+import React from "react"
 import {connect, Provider } from "react-redux"
 
 //Import Redux
@@ -33,9 +32,6 @@ if(localStorage.token) {
 }
 
 export default function App() {
-  /*useEffect(() => {
-    store.dispatch(loadUser())
-  }, [])*/
   return (
     <Provider store={store}>
       <Router>

@@ -1,4 +1,5 @@
 import { GET_POST, POST_ERROR, GET_POSTS, DELETE_POST } from "../actions/types";
+
 const initialState = {
   post: null,
   posts: [],

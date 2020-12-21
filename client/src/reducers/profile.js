@@ -6,6 +6,7 @@ import {
     UPDATE_PROFILE,
     GET_GITHUB
   } from "../actions/types";
+  
   const initialState = {
     profile: null,
     profiles: [],
