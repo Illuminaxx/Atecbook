@@ -8,7 +8,9 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3003;
 
-app.use(compression())
+app.use(compression({
+  level: 9
+}))
 app.use(express.json({ useUrlExtended: false }));
 //connect db
 connectDB();
