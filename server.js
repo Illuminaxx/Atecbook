@@ -1,3 +1,4 @@
+var compression = require('compression')
 const express = require("express");
 const connectDB = require("./config/db");
 const router = require("./routes/api/router");
@@ -7,6 +8,7 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3003;
 
+app.use(compression())
 app.use(express.json({ useUrlExtended: false }));
 //connect db
 connectDB();
