@@ -18,10 +18,10 @@ var urlsToCache = [
     'https://ka-f.fontawesome.com/releases/v5.15.1/webfonts/free-fa-brands-400.woff2',
     '/dist/js/dexie.js',
     'favicon.ico',
-    'logo192.png',
-    'logo256.png',
-    'logo384.png',
-    'logo512.png',
+    '/logo192.png',
+    '/logo256.png',
+    '/logo384.png',
+    '/logo512.png',
     'manifest.json',
     'service-worker.js',
     '/'
@@ -73,7 +73,7 @@ self.addEventListener('fetch', event => {
         if(event.request.method === "POST" || event.request.method === "PUT") {
             let requestURL = new URL(event.request.url);
             //console.log(requestURL);
-            console.log(JSON.stringify({event}))
+            console.log(JSON.stringify(event.request))
             // console.log("URL: " + event.request.url + " => " + event.request.method);
 
             if(requestURL.href.match('/api/*')) {
