@@ -32,7 +32,8 @@ ul {
 }
 
 img {
-  width: 100%;
+  width: 180px;
+  height: 48px;
 }
 
 /* Utilities */

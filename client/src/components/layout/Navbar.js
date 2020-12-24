@@ -48,7 +48,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <h1>
         <Link to="/">
           {/*<i className="fa fa-commenting" aria-hidden="true"></i> ATEC'book */}
-          <img src={logo} alt="Logo Atecna" width="180px" height="48px" />
+          <img src={logo} alt="Logo Atecna" />
         </Link>
       </h1>
       <>{isAuthenticated ? authLinks : guestLinks}</>
