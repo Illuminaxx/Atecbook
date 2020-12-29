@@ -31,13 +31,14 @@ function AddExperience({ addExperience, history }) {
   };
   return (
     <>
-      <h1 class="large text-primary">Ajouter une expérience</h1>
-      <p class="lead">
-        <i class="fas fa-code-branch"></i> Ajouter les postes que vous avez occupés dans le passé
+      <section className="container">
+      <h1 className="large text-primary">Ajouter une expérience</h1>
+      <p className="lead">
+        <i className="fas fa-code-branch"></i> Ajouter les postes que vous avez occupés dans le passé
       </p>
       <small>*required field</small>
-      <form class="form" onSubmit={e => onSubmit(e)}>
-        <div class="form-group">
+      <form className="form" onSubmit={e => onSubmit(e)}>
+        <div className="form-group">
           <input
             type="text"
             placeholder="* Job Title"
@@ -47,7 +48,7 @@ function AddExperience({ addExperience, history }) {
             onChange={e => onChange(e)}
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <input
             type="text"
             placeholder="* Company"
@@ -57,7 +58,7 @@ function AddExperience({ addExperience, history }) {
             onChange={e => onChange(e)}
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <input
             type="text"
             placeholder="Location"
@@ -107,6 +108,7 @@ function AddExperience({ addExperience, history }) {
           Retour
         </Link>
       </form>
+      </section>
     </>
   );
 }

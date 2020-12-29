@@ -11,6 +11,7 @@ const Profiles = ({ getAllProfiles, profile: { profiles } }) => {
   }, [getAllProfiles]);
   return (
     <>
+      <section className="container">
       <h1 className="large text-primary">Communautés</h1>
       <p className="lead">
         <i className="fab fa-connectdevelop"></i> Naviguez et connectez-vous avec des personnes similaires
@@ -38,6 +39,7 @@ const Profiles = ({ getAllProfiles, profile: { profiles } }) => {
           </div>
         ))}
       </div>
+      </section>
     </>
   );
 };

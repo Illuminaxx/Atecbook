@@ -48,6 +48,7 @@ const CreateProfile = ({ createProfile, history }) => {
   };
   return (
     <>
+      <section className="container">
       <h1 className="large text-primary">Créer votre profil</h1>
       <p className="lead">
         <i className="fas fa-user"></i> Quelques informations pour votre
@@ -206,6 +207,7 @@ const CreateProfile = ({ createProfile, history }) => {
           Retour
         </Link>
       </form>
+      </section>
     </>
   );
 };

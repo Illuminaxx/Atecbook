@@ -19,6 +19,7 @@ function Posts({
 
   return (
     <>
+      <section className="container">
       {loading ? (
         <Loading />
       ) : (
@@ -76,6 +77,7 @@ function Posts({
             ))}
         </>
       )}
+      </section>
     </>
   );
 }

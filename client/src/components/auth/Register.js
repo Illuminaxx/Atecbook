@@ -35,6 +35,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
   }
   return (
     <>
+      <section className="container">
       <h1 className="large text-primary">Créer un compte</h1>
       <p className="lead">
         <i className="fas fa-user"></i> Créer votre compte
@@ -87,6 +88,7 @@ export const Register = ({ setAlert, register, isAuthenticated }) => {
       <p className="my-1">
         Vous avez déjà un compte ? <Link to="/login">S'identifier</Link>
       </p>
+      </section>
     </>
   );
 };

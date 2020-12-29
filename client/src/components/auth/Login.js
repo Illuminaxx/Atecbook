@@ -26,6 +26,7 @@ export const Login = ({ login, isAuthenticated }) => {
 
   return (
     <>
+      <section className="container">
       <h1 className="large text-primary">Connexion</h1>
       <p className="lead">
         <i className="fas fa-user"></i> Entrez vos données de connexion
@@ -55,6 +56,7 @@ export const Login = ({ login, isAuthenticated }) => {
       <p className="my-1">
         Vous n'avez pas de compte ? <Link to="/register">S'inscrire</Link>
       </p>
+      </section>
     </>
   );
 };

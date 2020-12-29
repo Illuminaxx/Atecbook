@@ -37,7 +37,6 @@ export default function App() {
       <Router>
         <Navbar />
         <Route exact path="/" component={Landing} />
-        <section className="container">
           <Alert />
           <Switch>
             <Route exact path="/register" component={Register} />
@@ -64,7 +63,6 @@ export default function App() {
               component={CreateProfile}
             />
           </Switch>
-        </section>
       </Router>
     </Provider>
   )

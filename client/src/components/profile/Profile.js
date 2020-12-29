@@ -19,6 +19,7 @@ const Profile = ({
   }, [match, loading, getProfileById]);
   return (
     <>
+      <section className="container">
       <>
         <Link to="/profiles" className="btn btn-light">
           Retour aux profils
@@ -38,6 +39,7 @@ const Profile = ({
       ) : (
         <Loading />
       )}
+      </section>
     </>
  
   );

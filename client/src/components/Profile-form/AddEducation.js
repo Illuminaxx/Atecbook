@@ -40,6 +40,7 @@ function AddEducation({ addEducation, history }) {
   };
   return (
     <>
+      <section className="container">
       <h1 className="large text-primary">Ajoutez votre formation</h1>
       <p className="lead">
         <i className="fas fa-graduation-cap"></i> Ajouter une école, un bootcamp, etc.
@@ -124,6 +125,7 @@ function AddEducation({ addEducation, history }) {
           Retour
         </Link>
       </form>
+      </section>
     </>
   );
 }

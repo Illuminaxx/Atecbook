@@ -14,6 +14,7 @@ const Post = ({ match, getPostbyId, post: { post, loading } }) => {
   }, [match, getPostbyId]);
   return (
     <>
+      <section className="container">
       {post == null ? (
         <Loading />
       ) : (
@@ -36,6 +37,7 @@ const Post = ({ match, getPostbyId, post: { post, loading } }) => {
           <Comments />
         </>
       )}
+      </section>
     </>
   );
 };

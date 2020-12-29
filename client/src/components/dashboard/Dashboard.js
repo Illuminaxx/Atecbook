@@ -22,6 +22,7 @@ const Dashboard = ({
     <Loader />
   ) : (
     <>
+      <section className="container">
       <h1 className="large text-primary">Tableau de bord</h1>
       <p className="lead">
         <i className="fas fa-user"></i> Bienvenue {user && user.name} !
@@ -43,6 +44,7 @@ const Dashboard = ({
           </button>
         </>
       )}
+      </section>
     </>
   );
 };

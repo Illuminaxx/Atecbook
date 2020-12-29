@@ -57,6 +57,7 @@ const EditProfile = ({
   };
   return (
     <>
+      <section className="container">
       <h1 className="large text-primary">Editer votre profil</h1>
       <p className="lead">
         <i className="fas fa-user"></i> Quelques informations pour votre
@@ -213,6 +214,7 @@ const EditProfile = ({
           Retour
         </Link>
       </form>
+      </section>
     </>
   );
 };
