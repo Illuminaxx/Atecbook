@@ -521,6 +521,11 @@ button {
     display: none;
   }
 
+  a.btn.btn-light {
+    margin-top: 12px;
+    display: block;
+  }
+
   /* Text Styles */
   .x-large {
     font-size: 3rem;
