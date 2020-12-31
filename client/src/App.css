@@ -499,7 +499,7 @@ button {
 
 .post .comment-count {
   /*background: var(--light-color);*/
-  color: #e2e0fb;
+  color: #fffffd;
   padding: 0.1rem 0.2rem;
   /*border-radius: 5px;*/
   font-size: 0.8rem;
