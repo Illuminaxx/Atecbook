@@ -560,7 +560,7 @@ button {
     font-weight: bold;
   }
 
-  .btn .btn-danger {
+  .btn .btn-danger::content {
     content: "\f1f8";
   }
 
