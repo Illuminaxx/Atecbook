@@ -499,7 +499,7 @@ button {
 
 .post .comment-count {
   /*background: var(--light-color);*/
-  color: #fffffd;
+  color: #fffffd ;
   padding: 0.1rem 0.2rem;
   /*border-radius: 5px;*/
   font-size: 0.8rem;
@@ -537,6 +537,27 @@ button {
 
   .lead {
     font-size: 1rem;
+  }
+
+  /* Dashboard */
+  .table thead {
+    display: none;
+  }
+
+  .table tr {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  .table td {
+    display: block;
+    text-align: right;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
   }
 
   /* Navbar */
