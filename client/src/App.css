@@ -560,6 +560,10 @@ button {
     font-weight: bold;
   }
 
+  .btn .btn-danger {
+    content: "\f1f8";
+  }
+
   /* Navbar */
   .navbar {
     display: block;
