@@ -39,7 +39,7 @@ const Dashboard = ({
           <DashboardAction />
           <Experience experienceList={profile.experience} />
           <Education educationList={profile.education} />
-          <button className="btn btn-danger" onClick={() => deleteAccount()}>
+          <button className="btn btn-danger delete-account" onClick={() => deleteAccount()}>
            Supprimer mon compte
           </button>
         </>

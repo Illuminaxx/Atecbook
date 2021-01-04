@@ -17,13 +17,13 @@ const Experience = ({ experienceList, deleteExperience }) => {
           </tr>
         </thead>
         <tbody>
-          {experienceList.map(({ company, title, from, to, _id }) => (
+          {experienceList.map(({ company, current, title, from, to, _id }) => (
             <tr key={_id}>
-              <td>{company}</td>
-              <td className="hide-sm">{title}</td>
-              <td className="hide-sm">
+              <td data-label="Entreprise">{company}</td>
+              <td className="hide-sm" data-label="Titre">{title}</td>
+              <td className="hide-sm" data-label="Années">
                 <Moment format="DD/MM/YYYY">{from}</Moment> -{" "}
-                {to == null || "" ? (
+                {current === true || "" ? (
                   "Now"
                 ) : (
                   <Moment format="DD/MM/YYYY">{to}</Moment>
@@ -31,7 +31,7 @@ const Experience = ({ experienceList, deleteExperience }) => {
               </td>
               <td>
                 <button
-                  className="btn btn-danger"
+                  className="btn btn-danger icon-trash"
                   onClick={() => deleteExperience(_id)}
                 >
                   Effacer

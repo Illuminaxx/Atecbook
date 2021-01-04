@@ -50,7 +50,7 @@ router.put(
       await profile.save();
       res.json(profile);
     } catch (error) {
-      Console.error(error.message);
+      console.error(error.message);
       res.status(500).send("Server error");
     }
   }

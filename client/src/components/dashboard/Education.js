@@ -32,7 +32,7 @@ const Education = ({ educationList, deleteEducation }) => {
               </td>
               <td>
                 <button
-                  className="btn btn-danger"
+                  className="btn btn-danger icon-trash"
                   onClick={() => deleteEducation(_id)}
                 >
                   Effacer
