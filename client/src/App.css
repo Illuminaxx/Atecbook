@@ -563,6 +563,10 @@ button {
   button.btn.btn-danger::after {
     content: "\f1f8";
     color: var(--danger-color);
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
   }
 
   /* Navbar */
