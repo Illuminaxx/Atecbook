@@ -560,8 +560,9 @@ button {
     font-weight: bold;
   }
 
-  button.btn.btn-danger::before {
+  button.btn.btn-danger::after {
     content: "\f1f8";
+    color: var(--danger-color);
   }
 
   /* Navbar */
