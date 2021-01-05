@@ -540,6 +540,10 @@ button {
   }
 
   /* Dashboard */
+  h2.my-2 {
+    text-align: center;
+  }
+  
   .table thead {
     display: none;
   }
@@ -560,11 +564,17 @@ button {
     font-weight: bold;
   }
 
-  .icon-trash {
-    width: 46vw;
+  .table td.hide-sm.year-school::before {
+    padding-right: 2em;
+    
   }
 
-
+  button.btn.btn-danger.icon-trash {
+    width: 64vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
 
   button.btn.btn-danger.icon-trash::before {
     content: "\f1f8";

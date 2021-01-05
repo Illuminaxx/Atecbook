@@ -21,8 +21,8 @@ const Education = ({ educationList, deleteEducation }) => {
           {educationList.map(({ school, degree, from, to, _id }) => (
             <tr key={_id}>
               <td data-label="École">{school}</td>
-              <td data-label="Diplome" className="hide-sm">{degree}</td>
-              <td data-label="Années" className="hide-sm">
+              <td data-label="Diplome" className="hide-sm degree-school">{degree}</td>
+              <td data-label="Années" className="hide-sm year-school">
                 <Moment format="DD/MM/YYYY">{from}</Moment> -{" "}
                 {to === null || "" ? (
                   "Now"
