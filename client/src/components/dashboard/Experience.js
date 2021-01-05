@@ -6,7 +6,7 @@ import { deleteExperience } from "../../actions/profile";
 const Experience = ({ experienceList, deleteExperience }) => {
   return (
     <>
-      <h2 className="my-2">&Eacute;xperiences</h2>
+      <h2 className="my-2">Expériences</h2>
       <table className="table">
         <thead>
           <tr>

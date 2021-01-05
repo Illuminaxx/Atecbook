@@ -23,11 +23,11 @@ const Education = ({ educationList, deleteEducation }) => {
               <td data-label="École">{school}</td>
               <td data-label="Diplome" className="hide-sm degree-school">{degree}</td>
               <td data-label="Années" className="hide-sm year-school">
-                <Moment format="DD/MM/YYYY">{from}</Moment> -{" "}
+                <Moment format="DD/MM/YYYY" className="from-date">{from}</Moment> -{" "}
                 {current === true || "" ? (
-                  "Now"
+                  <span className="now-time">Now</span>
                 ) : (
-                  <Moment format="DD/MM/YYYY">{to}</Moment>
+                  <Moment format="DD/MM/YYYY" className="to-date">{to}</Moment>
                 )}
               </td>
               <td>
