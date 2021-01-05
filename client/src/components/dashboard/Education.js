@@ -18,13 +18,13 @@ const Education = ({ educationList, deleteEducation }) => {
           </tr>
         </thead>
         <tbody>
-          {educationList.map(({ school, degree, from, to, _id }) => (
+          {educationList.map(({ school, current, degree, from, to, _id }) => (
             <tr key={_id}>
               <td data-label="École">{school}</td>
               <td data-label="Diplome" className="hide-sm degree-school">{degree}</td>
               <td data-label="Années" className="hide-sm year-school">
                 <Moment format="DD/MM/YYYY">{from}</Moment> -{" "}
-                {to === null || "" ? (
+                {current === true || "" ? (
                   "Now"
                 ) : (
                   <Moment format="DD/MM/YYYY">{to}</Moment>

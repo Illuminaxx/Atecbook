@@ -20,8 +20,8 @@ const Experience = ({ experienceList, deleteExperience }) => {
           {experienceList.map(({ company, current, title, from, to, _id }) => (
             <tr key={_id}>
               <td data-label="Entreprise">{company}</td>
-              <td className="hide-sm" data-label="Titre">{title}</td>
-              <td className="hide-sm" data-label="Années">
+              <td className="hide-sm title-experience" data-label="Titre">{title}</td>
+              <td className="hide-sm year-experience" data-label="Années">
                 <Moment format="DD/MM/YYYY">{from}</Moment> -{" "}
                 {current === true || "" ? (
                   "Now"

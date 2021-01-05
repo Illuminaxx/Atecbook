@@ -543,7 +543,7 @@ button {
   h2.my-2 {
     text-align: center;
   }
-  
+
   .table thead {
     display: none;
   }
@@ -565,7 +565,7 @@ button {
   }
 
   .table td.hide-sm.year-school::before {
-    padding-right: 2em;
+    padding-right: 1em;
     
   }
 
