@@ -144,7 +144,7 @@ const EditProfile = ({
         <div className="my-2">
           <button
             type="button"
-            className="btn btn-light"
+            className="btn btn-light social-media"
             onClick={() => toggle(!socialvisible)}
           >
             Ajouter vos réseaux sociaux

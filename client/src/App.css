@@ -641,6 +641,21 @@ button {
     margin: 16px 8px 16px 8px;  
   }
 
+  .form input[type="text"], 
+  .form input[type="email"], 
+  .form select {
+    font-size: 1.1rem;
+  }
+
+  .form .form-text {
+    font-size: .7rem;
+  }
+
+  small {
+    font-size: x-small;
+
+  }
+
   .dash-buttons a {
     display: block;
     width: 100%;
