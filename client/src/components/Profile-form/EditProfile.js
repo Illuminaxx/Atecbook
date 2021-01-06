@@ -63,7 +63,7 @@ const EditProfile = ({
         <i className="fas fa-user"></i> Quelques informations pour votre
         profil.
       </p>
-      <small>*required field</small>
+      <small>*Champs requis</small>
       <form className="form" onSubmit={e => onSubmit(e)}>
         <div className="form-group">
           <select name="status" value={status} onChange={e => onChange(e)}>
@@ -149,7 +149,7 @@ const EditProfile = ({
           >
             Ajouter vos réseaux sociaux
           </button>
-          <span>Optionnel</span>
+          <small className="form-text">Optionnel</small>
         </div>
         {socialvisible && (
           <>
@@ -210,7 +210,7 @@ const EditProfile = ({
           </>
         )}
         <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">
+        <Link className="btn btn-light my-1 return-button" to="/dashboard">
           Retour
         </Link>
       </form>
