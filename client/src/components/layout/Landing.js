@@ -11,7 +11,7 @@ const Landing = ({ isAuthenticated }) => {
     <section className="landing">
       <div className="dark-overlay">
         <div className="landing-inner">
-          <h1 className="x-large">ATEC'book</h1>
+          <h1 className="x-large">Atecbook</h1>
           <p className="lead">
             La réussite de votre transformation digitale
           </p>
