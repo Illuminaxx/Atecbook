@@ -32,16 +32,16 @@ function Posts({
                 <div className="post bg-white p-1 my-1">
                   <div>
                     <a href={`/profile/${post.user}`}>
-                      <img className="round-img" src={post.avatar} alt="" />
-                      <h4>{post.name}</h4>
+                      <img className="round-img avatar" src={post.avatar} alt="" />
+                      <h4 className="post-name">{post.name}</h4>
                     </a>
                   </div>
                   <div>
-                    <p className="my-1">{post.text}</p>
-                    <p className="post-date">{`Posted on ${post.date}`}</p>
+                    <p className="my-1 post-text">{post.text}</p>
+                    <p className="post-date date">{`${new Date(post.date).toLocaleDateString("fr-FR")}`}</p>
                     <button
                       type="button"
-                      className="btn btn-light"
+                      className="btn btn-light post-like"
                       onClick={() => like(post._id)}
                     >
                       <i className="fas fa-thumbs-up"></i>
@@ -49,13 +49,13 @@ function Posts({
                     </button>
                     <button
                       type="button"
-                      className="btn btn-light"
+                      className="btn btn-light post-unlike"
                       onClick={() => unlike(post._id)}
                     >
                       <i className="fas fa-thumbs-down"></i>
                     </button>
-                    <Link to={`/post/${post._id}`} className="btn btn-primary">
-                      Discussion{" "}
+                    <Link to={`/post/${post._id}`} className="btn btn-primary comments count">
+                      {" "}
                       {post.comments.length > 0 && (
                         <span className="comment-count">
                           {post.comments.length}
@@ -66,9 +66,9 @@ function Posts({
                       <button
                         type="button"
                         onClick={() => deletePost(post._id)}
-                        className="btn btn-danger"
+                        className="btn btn-danger post-delete"
                       >
-                        <i className="fas fa-times"></i>
+                        
                       </button>
                     )}
                   </div>
