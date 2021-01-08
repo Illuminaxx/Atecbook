@@ -39,7 +39,7 @@ export const Login = ({ login, isAuthenticated }) => {
             name="email"
             value={email}
             onChange={onChange}
-            aria-labelledby="email-label"
+            aria-label="email-label"
           />
         </div>
         <div className="form-group">
@@ -50,7 +50,7 @@ export const Login = ({ login, isAuthenticated }) => {
             minLength="6"
             value={password}
             onChange={onChange}
-            aria-labelledby="pwd-label"
+            aria-label="pwd-label"
           />
         </div>
         <input type="submit" className="btn btn-primary" value="Connexion" />
