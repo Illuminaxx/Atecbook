@@ -36,6 +36,11 @@ img {
   height: auto;
 }
 
+img.logo {
+  width: 150px;
+  height: auto;
+}
+
 /* Utilities */
 .container {
   max-width: 1100px;
