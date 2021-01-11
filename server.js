@@ -11,12 +11,15 @@ const PORT = process.env.PORT || 3003;
 app.use(compression({
   level: 9
 }))
+
 app.use(express.json({ useUrlExtended: false }));
 //connect db
 connectDB();
 app.use("/api", router);
 
-
+app.use(function (req, res, next) {
+  res.set('Cache-control', 'public, max-age=31536000')
+})
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
