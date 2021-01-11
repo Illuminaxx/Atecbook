@@ -14,7 +14,7 @@ var urlsToCache = [
     '/static/media/showcase.36c4bd33.jpg',
     'https://kit.fontawesome.com/4276cb84f0.js',
     'https://ka-f.fontawesome.com/releases/v5.15.1/webfonts/free-fa-solid-900.woff2',
-        'https://ka-f.fontawesome.com/releases/v5.15.1/webfonts/free-fa-brands-400.woff2',
+    'https://ka-f.fontawesome.com/releases/v5.15.1/webfonts/free-fa-brands-400.woff2',
     '/dist/js/dexie.js',
     'favicon.ico',
     '/logo192.png',

@@ -123,7 +123,6 @@ export const removeComment = (post_id, comment_id) => async (dispatch) => {
     const res = await axios.delete(
       `/api/posts/comment/${post_id}/${comment_id}`
     );
-    // console.log("in create comment");
     dispatch(getPostbyId(post_id));
   } catch (err) {
     dispatch({
