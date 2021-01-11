@@ -17,9 +17,9 @@ app.use(express.json({ useUrlExtended: false }));
 connectDB();
 app.use("/api", router);
 
-app.use(function (req, res, next) {
+/*app.use(function (req, res, next) {
   res.set('Cache-control', 'public, max-age=300')
-})
+})*/
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
