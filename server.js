@@ -18,7 +18,7 @@ connectDB();
 app.use("/api", router);
 
 app.use(function (req, res, next) {
-  res.set('Cache-control', 'public, max-age=31536000')
+  res.set('Cache-control', 'public, max-age=300')
 })
 
 if (process.env.NODE_ENV === "production") {
