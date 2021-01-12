@@ -4,23 +4,23 @@
 self.importScripts('./dist/js/dexie.js')
 
 var doCache = true;
-var CACHE_NAME = "atec-book-cache";
+var CACHE_NAME = "atecbook-cache";
 var urlsToCache = [
     '/static/css/main.5d019410.chunk.css',
     '/static/js/2.86c0399e.chunk.js',
     '/static/js/main.43aedba5.chunk.js',
     '/static/js/runtime-main.c012fedc.js',
-    '/static/media/logo.5e3be87f.svg',
-    '/static/media/showcase.36c4bd33.jpg',
+    '/static/media/logo.5e3be87f.webp',
+    '/static/media/showcase.36c4bd33.webp',
     'https://kit.fontawesome.com/4276cb84f0.js',
     'https://ka-f.fontawesome.com/releases/v5.15.1/webfonts/free-fa-solid-900.woff2',
     'https://ka-f.fontawesome.com/releases/v5.15.1/webfonts/free-fa-brands-400.woff2',
     '/dist/js/dexie.js',
     'favicon.ico',
-    '/logo192.png',
-    '/logo256.png',
-    '/logo384.png',
-    '/logo512.png',
+    '/logo192.webp',
+    '/logo256.webp',
+    '/logo384.webp',
+    '/logo512.webp',
     'manifest.json',
     'service-worker.js',
     '/'
