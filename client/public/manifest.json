@@ -1,8 +1,8 @@
 {
   "name": "Atecna social Network",
   "short_name": "ATEC'Book",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "theme_color": "#000000",
+  "background_color": "#000000",
   "description": "Social network for a Atecna Company",
   "display": "standalone",
   "scope": "https://atecbook.herokuapp.com/",
