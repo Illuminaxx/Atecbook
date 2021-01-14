@@ -15,7 +15,6 @@ app.use(compression({
 }))
 
 app.use(express.json({ useUrlExtended: false }));
-app.use(helmet());
 app.use(helmet.hidePoweredBy());
 //connect db
 connectDB();
