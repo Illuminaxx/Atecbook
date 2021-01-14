@@ -9,14 +9,14 @@
   "start_url": "https://atecbook.herokuapp.com/",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "favicon.webp",
       "sizes": "64x64",
-      "type": "image/x-icon",
+      "type": "image/webp",
       "purpose": "any maskable"
     },
     {
       "src": "logo192.png",
-      "sizes": "192x192",
+      "sizes": "192x192", 
       "type": "image/png",
       "purpose": "any maskable"
     },
