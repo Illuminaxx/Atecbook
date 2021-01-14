@@ -3,6 +3,7 @@ const express = require("express");
 const connectDB = require("./config/db");
 const router = require("./routes/api/router");
 const path = require("path");
+const helmet = require("helmet");
 var enforce = require('express-sslify');
 
 
@@ -14,6 +15,8 @@ app.use(compression({
 }))
 
 app.use(express.json({ useUrlExtended: false }));
+app.use(helmet());
+app.use(helmet.hidePoweredBy());
 //connect db
 connectDB();
 app.use("/api", router);
