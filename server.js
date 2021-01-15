@@ -1,9 +1,9 @@
-var compression = require('compression')
+const compression = require('compression')
 const express = require("express");
 const connectDB = require("./config/db");
 const router = require("./routes/api/router");
 const path = require("path");
-var enforce = require('express-sslify');
+const enforce = require('express-sslify');
 
 
 const app = express();
