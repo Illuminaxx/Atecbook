@@ -14,20 +14,6 @@ import Loading from "./components/layout/loading"
 import PrivateRoute from "./components/auth/PrivateRoute"
 
 //Components
-/*import Navbar from "./components/layout/Navbar"
-import Landing from "./components/layout/Landing"
-import Login from "./components/auth/Login"
-import Dashboard from "./components/dashboard/Dashboard"
-import CreateProfile from "./components/Profile-form/CreateProfile"
-import Register from "./components/auth/Register"
-import Alert from "./components/layout/Alert"
-import EditProfile from "./components/Profile-form/EditProfile"
-import AddEducation from "./components/Profile-form/AddEducation"
-import AddExperience from "./components/Profile-form/AddExperience"
-import Profiles from "./components/profile/Profiles"
-import Profile from "./components/profile/Profile"
-import Posts from "./components/post/Posts"
-import Post from "./components/post/Post"*/
 const Navbar =  lazy(() => import("./components/layout/Navbar"))
 const Landing =  lazy(() => import("./components/layout/Landing"))
 const Login =  lazy(() => import("./components/auth/Login"))
