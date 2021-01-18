@@ -13,7 +13,7 @@ app.use(compression({
   level: 9
 }))
 
-app.use(express.json({ useUrlExtended: false }));
+app.use(express.json({ useUrlExtended: false, limit: '10mb' }));
 //connect db
 connectDB();
 app.use("/api", router);
