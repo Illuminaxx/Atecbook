@@ -57,28 +57,19 @@ self.addEventListener('activate', (event) => {
 // Cache and requests returned
 self.addEventListener('fetch', event => {
     if(doCache) {
-
         if(event.request.method === "GET") {
             event.respondWith(
                 caches.match(event.request).then(function(response) {
-                    // console.log('Request event: ' + event.request.url + " => " + event.request.method )
                     return response || fetch(event.request)
-                    
                 })
             );
         }
 
-
         if(event.request.method === "POST" || event.request.method === "PUT") {
             let requestURL = new URL(event.request.url);
-            //console.log(requestURL);
-            console.log(JSON.stringify(event.request))
-            // console.log("URL: " + event.request.url + " => " + event.request.method);
-
             if(requestURL.href.match('/api/*')) {
                 console.log('authentication request')
             }
-
 
             var database = new Dexie(CACHE_REQUEST);
             database.version(DB_VERSION).stores({

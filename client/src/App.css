@@ -2,7 +2,6 @@
 :root {
   --dark-color: #F4A11E;
   --primary-color: #18b0b0;
-  /* #343a40; */
   --light-color: #f4f4f4;
   --danger-color: #e30000;
   --success-color: #28a745;
@@ -18,7 +17,6 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  /*background-color: #f4f4f4;*/
   color: #333;
 }
 
@@ -31,15 +29,6 @@ ul {
   list-style: none;
 }
 
-/*img {
-  width: 120px;
-  height: auto;
-}
-
-img.logo {
-  width: 150px;
-  height: auto;
-}*/
 
 /* Utilities */
 .container {
@@ -202,7 +191,7 @@ img.logo {
   color: #fff;
 }
 
-.btn-danger,
+
 .bg-danger,
 .badge-danger,
 .alert-danger {
@@ -486,12 +475,17 @@ button {
   padding: 0.5rem;
 }
 
+h4.post-name {
+  color: #000000;
+  font-weight: 500;
+  font-size: medium;
+}
+
 .post {
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-gap: 2rem;
   align-items: center;
-  /*border-radius: 5% 0 0 0;*/
 }
 
 .post>div:first-child {
@@ -502,12 +496,43 @@ button {
   width: 100px;
 }
 
+.post-like, .post-unlike {
+  background-color: transparent;
+}
+
 .post .comment-count {
-  /*background: var(--light-color);*/
-  color: #fffffd ;
+  color: #9F2804 ;
   padding: 0.1rem 0.2rem;
-  /*border-radius: 5px;*/
   font-size: 0.8rem;
+  font-weight: 600;
+
+}
+
+a.btn.btn-primary.comments {
+  background-color: transparent;
+}
+
+a.btn.btn-primary.comments::before {
+  content: "\f075";
+  font-family: 'FontAwesome';
+  color: grey;
+  font-size: large;
+}
+
+button.btn.btn-danger.post-delete {
+  background-color: transparent;
+  float: right;
+  display: flex;
+  align-items: flex-end;
+  margin-right: -1px;
+  margin-top: 1.2px;
+}
+
+button.btn.btn-danger.post-delete::before {
+  content: "\f05e";
+  font-family: 'FontAwesome';
+  color: grey;
+  font-size: medium;
 }
 
 .post .post-date {
@@ -675,6 +700,7 @@ button {
     float: left;
     height: 12vh;
   }
+
   h4.post-name {
     color: #000000;
     font-weight: 500;
@@ -713,8 +739,6 @@ button {
     color: grey;
     font-size: large;
   }
-
-  
 
   .post .comment-count {
     color: grey;
