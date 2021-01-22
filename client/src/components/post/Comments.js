@@ -31,6 +31,7 @@ function Comments({ removeComment, post: { comments, _id }, auth: { user } }) {
                   type="button"
                   className="btn btn-danger"
                   onClick={() => removeComment(_id, comment._id)}
+                  value="Efface le commentaire"
                 >
                   <i className="fas fa-times"></i>
                 </button>

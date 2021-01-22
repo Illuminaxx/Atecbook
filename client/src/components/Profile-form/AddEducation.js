@@ -120,8 +120,8 @@ function AddEducation({ addEducation, history }) {
             onChange={e => onChange(e)}
           ></textarea>
         </div>
-        <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">
+        <input type="submit" className="btn btn-primary my-1" title="Ajouter une formation dans son curriculum vitae" />
+        <Link className="btn btn-light my-1" to="/dashboard" value="Retour au tableau de bord">
           Retour
         </Link>
       </form>

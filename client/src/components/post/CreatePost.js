@@ -2,13 +2,16 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { addPost } from "../../actions/post";
 import PropTypes from "prop-types";
+
 function CreatePost({ addPost }) {
+
   const [text, settext] = useState("");
   function onSubmit(e) {
     e.preventDefault();
     addPost(text);
     settext("");
   }
+  
   return (
     <>
       <h1 className="large text-primary">Posts</h1>
@@ -34,7 +37,7 @@ function CreatePost({ addPost }) {
             type="submit"
             onClick={onSubmit}
             className="btn btn-dark my-1"
-            value="Submit"
+            value="Envoyer le post dans la liste des posts"
           >Envoyer</button>
         </form>
       </div>

@@ -43,6 +43,7 @@ function Posts({
                       type="button"
                       className="btn btn-light post-like"
                       onClick={() => like(post._id)}
+                      value="bouton pour aimer un post"
                     >
                       <i className="fas fa-thumbs-up"></i>
                       <span>{post.likes.length > 0 && post.likes.length}</span>
@@ -51,6 +52,7 @@ function Posts({
                       type="button"
                       className="btn btn-light post-unlike"
                       onClick={() => unlike(post._id)}
+                      value="bouton pour ne pas aimer un post"
                     >
                       <i className="fas fa-thumbs-down"></i>
                     </button>
@@ -67,6 +69,7 @@ function Posts({
                         type="button"
                         onClick={() => deletePost(post._id)}
                         className="btn btn-danger post-delete"
+                        value="Supprimer un post de la liste des postes"
                       >
                         
                       </button>

@@ -103,8 +103,8 @@ function AddExperience({ addExperience, history }) {
           </div>
         )}
 
-        <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">
+        <input type="submit" className="btn btn-primary my-1" title="Ajouter une expérience professionnelle à notre curriculum vitae" />
+        <Link className="btn btn-light my-1" to="/dashboard" value="Revenir au tableau de bord">
           Retour
         </Link>
       </form>

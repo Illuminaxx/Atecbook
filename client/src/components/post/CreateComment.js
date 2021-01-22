@@ -32,7 +32,7 @@ const CreateComment = ({ addComment, post: { post } }) => {
           type="submit"
           onClick={submitComment}
           className="btn btn-dark my-1"
-          value="Submit"
+          value="Envoyer le commentaire dans la liste des commentaires"
         />
       </form>
     </div>
