@@ -81,6 +81,9 @@ const CreateProfile = ({ createProfile, history }) => {
             name="company"
             value={company}
             onChange={e => onChange(e)}
+            aria-label="Entreprise"
+            title="Entreprise où se trouve l'utilisateur"
+            aria-required="true"
           />
           <small className="form-text">
             Votre entreprise
@@ -93,6 +96,9 @@ const CreateProfile = ({ createProfile, history }) => {
             name="website"
             value={website}
             onChange={e => onChange(e)}
+            aria-label="Site web"
+            title="Site web personnel ou portfolio"
+            aria-required="true"
           />
           <small className="form-text">
             Vous n'êtes pas célèbre si vous n'avez pas de site web
@@ -105,6 +111,9 @@ const CreateProfile = ({ createProfile, history }) => {
             name="location"
             value={location}
             onChange={e => onChange(e)}
+            aria-label="Lieu de résidence"
+            title="Lieu de résidence de l'utilisateur"
+            aria-required="true"
           />
           <small className="form-text">
             Ville
@@ -117,6 +126,8 @@ const CreateProfile = ({ createProfile, history }) => {
             name="skills"
             value={skills}
             onChange={e => onChange(e)}
+            aria-label="Compétences"
+            title="Ensemble des compétences acquises par l'utilisateur"
           />
           <small className="form-text">
              
@@ -128,6 +139,8 @@ const CreateProfile = ({ createProfile, history }) => {
             name="bio"
             value={bio}
             onChange={e => onChange(e)}
+            aria-label="Biographie"
+            title="Biographie de l'utilisateur"
           ></textarea>
           <small className="form-text">
             Parlez-nous un peu de vous !
@@ -202,8 +215,8 @@ const CreateProfile = ({ createProfile, history }) => {
             </div>
           </>
         )}
-        <input type="submit" className="btn btn-primary my-1" />
-        <Link className="btn btn-light my-1" to="/dashboard">
+        <input type="submit" className="btn btn-primary my-1" title="Créer le profil de l'utilisateur"/>
+        <Link className="btn btn-light my-1" to="/dashboard"  value="Retour au tableau de bord">
           Retour
         </Link>
       </form>

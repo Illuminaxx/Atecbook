@@ -46,6 +46,9 @@ function AddExperience({ addExperience, history }) {
             required
             value={title}
             onChange={e => onChange(e)}
+            aria-label="Titre du job"
+            aria-required="true"
+            title="Titre du job"
           />
         </div>
         <div className="form-group">
@@ -56,6 +59,9 @@ function AddExperience({ addExperience, history }) {
             required
             value={company}
             onChange={e => onChange(e)}
+            aria-label="Entreprise"
+            aria-required="true"
+            title="Entreprise où s'effectue le travail"
           />
         </div>
         <div className="form-group">
@@ -65,6 +71,8 @@ function AddExperience({ addExperience, history }) {
             name="location"
             value={location}
             onChange={e => onChange(e)}
+            aria-label="Lieu"
+            title="Lieu d'exercise de la fonction"
           />
         </div>
 
@@ -75,6 +83,8 @@ function AddExperience({ addExperience, history }) {
             name="from"
             value={from}
             onChange={e => onChange(e)}
+            aria-label="Date de début"
+            title="Date de début de la prise de fonction"
           />
         </div>
         <div className="form-group">
@@ -87,6 +97,8 @@ function AddExperience({ addExperience, history }) {
                 setFormData({ ...formData, current: !current });
                 setToggelTo(!toggleTo);
               }}
+              aria-label="Entreprise actuelle"
+              title="Entreprise où se déroule l'emploi"
             />{" "}
             Entreprise actuelle ?
           </p>
@@ -99,6 +111,8 @@ function AddExperience({ addExperience, history }) {
               name="to"
               value={to}
               onChange={e => onChange(e)}
+              aria-label="Date de fin"
+              title="Date de fin de la prise de fonction"
             />
           </div>
         )}

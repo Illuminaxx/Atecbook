@@ -55,6 +55,9 @@ function AddEducation({ addEducation, history }) {
             required
             value={school}
             onChange={e => onChange(e)}
+            aria-label="Ecole ou centre de formation"
+            aria-required="true"
+            title="Ecole ou centre de formation où se déroule les études"
           />
         </div>
         <div className="form-group">
@@ -65,6 +68,9 @@ function AddEducation({ addEducation, history }) {
             required
             value={degree}
             onChange={e => onChange(e)}
+            aria-label="Diplôme ou certificat"
+            aria-required="true"
+            title="Type de diplômes ou certificats"
           />
         </div>
         <div className="form-group">
@@ -74,6 +80,8 @@ function AddEducation({ addEducation, history }) {
             name="fieldofstudy"
             value={fieldofstudy}
             onChange={e => onChange(e)}
+            aria-label="Domaine d'étude"
+            title="Domaine d'études des diplomes"
           />
         </div>
         <div className="form-group">
@@ -83,6 +91,8 @@ function AddEducation({ addEducation, history }) {
             name="from"
             value={from}
             onChange={e => onChange(e)}
+            aria-label="Date de début"
+            title="Date de début de la formation ou de l'entrée en école"
           />
         </div>
         <div className="form-group">
@@ -95,6 +105,8 @@ function AddEducation({ addEducation, history }) {
                 setFormData({ ...formData, current: !current });
                 setToggelTo(!toggleTo);
               }}
+              aria-label="formation ou école actuelle"
+              title="Formation ou ecole actuelle"
             />{" "}
             &Eacute;cole ou bootcamp actuel ?
           </p>
@@ -107,6 +119,8 @@ function AddEducation({ addEducation, history }) {
               name="to"
               value={to}
               onChange={e => onChange(e)}
+              aria-label="date de fin"
+              title="Date de fin de formation ou d'étude"
             />
           </div>
         )}
@@ -118,6 +132,8 @@ function AddEducation({ addEducation, history }) {
             placeholder="Program Description"
             value={description}
             onChange={e => onChange(e)}
+            aria-multiline="true"
+            aria-label="Description du programme de la formation ou des études"
           ></textarea>
         </div>
         <input type="submit" className="btn btn-primary my-1" title="Ajouter une formation dans son curriculum vitae" />
