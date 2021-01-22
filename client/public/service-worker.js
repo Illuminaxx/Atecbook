@@ -11,7 +11,7 @@ var urlsToCache = [
     '/static/js/main.43aedba5.chunk.js',
     '/static/js/runtime-main.c012fedc.js',
     '/static/media/logo.5e3be87f.webp',
-    '/static/media/showcase.36c4bd33.webp',
+    '/static/media/show.d06f0fd8.webp',
     'https://kit.fontawesome.com/4276cb84f0.js',
     'https://ka-f.fontawesome.com/releases/v5.15.1/webfonts/free-fa-solid-900.woff2',
     'https://ka-f.fontawesome.com/releases/v5.15.1/webfonts/free-fa-brands-400.woff2',
