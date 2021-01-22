@@ -90,6 +90,8 @@ const EditProfile = ({
             name="company"
             value={company}
             onChange={e => onChange(e)}
+            aria-label="Entreprise"
+            title="Entreprise où se trouve l'utilisateur"
           />
           <small className="form-text">
             Votre entreprise
@@ -102,6 +104,8 @@ const EditProfile = ({
             name="website"
             value={website}
             onChange={e => onChange(e)}
+            aria-label="Site web"
+            title="Site web ou portfolio de l'utilisateur"
           />
           <small className="form-text">
             Vous n'êtes pas célèbre si vous n'avez pas de site web
@@ -114,6 +118,8 @@ const EditProfile = ({
             name="location"
             value={location}
             onChange={e => onChange(e)}
+            aria-label="Lieu de résidence"
+            title="Lieu d'habitation de l'utilisateur"
           />
           <small className="form-text">
             Ville
@@ -126,6 +132,9 @@ const EditProfile = ({
             name="skills"
             value={skills}
             onChange={e => onChange(e)}
+            aria-label="Compétences"
+            aria-required="true"
+            title="Compétences acquises par l'utilisateur"
           />
           <small className="form-text">
             Veuillez utiliser une virgule pour séparer vos compétences
@@ -137,6 +146,8 @@ const EditProfile = ({
             name="bio"
             value={bio}
             onChange={e => onChange(e)}
+            aria-label="Biographie"
+            title="Biographie de l'utilisateur"
           ></textarea>
           <small className="form-text">Parlez-nous un peu de vous !</small>
         </div>

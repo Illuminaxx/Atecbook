@@ -127,10 +127,11 @@ const CreateProfile = ({ createProfile, history }) => {
             value={skills}
             onChange={e => onChange(e)}
             aria-label="Compétences"
+            aria-required="true"
             title="Ensemble des compétences acquises par l'utilisateur"
           />
           <small className="form-text">
-             
+            Veuillez utiliser une virgule pour séparer vos compétences
           </small>
         </div>
         <div className="form-group">
