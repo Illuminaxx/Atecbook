@@ -11,7 +11,7 @@ function CreatePost({ addPost }) {
     addPost(text);
     settext("");
   }
-  
+
   return (
     <>
       <h1 className="large text-primary">Posts</h1>
@@ -32,12 +32,15 @@ function CreatePost({ addPost }) {
             required
             value={text}
             onChange={e => settext(e.target.value)}
+            aria-multiline="true"
+            aria-label="Sujet du post"
           ></textarea>
           <button
             type="submit"
             onClick={onSubmit}
             className="btn btn-dark my-1"
             value="Envoyer le post dans la liste des posts"
+            aria-label="Soumettre le post"
           >Envoyer</button>
         </form>
       </div>

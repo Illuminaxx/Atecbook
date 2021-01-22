@@ -6,13 +6,14 @@ import { connect } from "react-redux";
 import { removeComment } from "../../actions/post";
 
 function Comments({ removeComment, post: { comments, _id }, auth: { user } }) {
+  
   return (
     <div className="comments">
       {comments !== [] &&
         comments.map(comment => (
           <div className="post bg-white p-1 my-1">
             <div>
-              <Link href={`/profile/${comment.user}`}>
+              <Link href={`/profile/${comment.user}`} aria-label="Accéder au commentaire d'un utilisateur">
                 <img className="round-img" src={comment.avatar} alt="" />
                 <h4>{comment.name || "Unknown"}</h4>
               </Link>
@@ -20,7 +21,7 @@ function Comments({ removeComment, post: { comments, _id }, auth: { user } }) {
             <div>
               <p className="my-1">{comment.text} </p>
               <p className="post-date">
-                <Moment form at="YYYY/MM/DD">
+                <Moment locale="fr-FR" format="DD/MM/YYYY">
                   {comment.date}
                 </Moment>
               </p>
@@ -32,6 +33,7 @@ function Comments({ removeComment, post: { comments, _id }, auth: { user } }) {
                   className="btn btn-danger"
                   onClick={() => removeComment(_id, comment._id)}
                   value="Efface le commentaire"
+                  aria-label="Effacer le commentaire"
                 >
                   <i className="fas fa-times"></i>
                 </button>

@@ -23,16 +23,19 @@ const CreateComment = ({ addComment, post: { post } }) => {
           name="text"
           cols="30"
           rows="5"
-          placeholder="Comment on this post"
+          placeholder="Commentaire"
           required
           value={text}
           onChange={onChange}
+          aria-multiline="true"
+          aria-label="Commentaires"
         ></textarea>
         <input
           type="submit"
           onClick={submitComment}
           className="btn btn-dark my-1"
-          value="Envoyer le commentaire dans la liste des commentaires"
+          title="Envoyer le commentaire dans la liste des commentaires"
+          aria-label="Envoyer le commentaire"
         />
       </form>
     </div>

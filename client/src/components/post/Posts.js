@@ -31,7 +31,7 @@ function Posts({
               <div className="posts" key={post._id}>
                 <div className="post bg-white p-1 my-1">
                   <div>
-                    <a href={`/profile/${post.user}`}>
+                    <a href={`/profile/${post.user}`} aria-label="Envoie vers le profil de l'utilisateur">
                       <img className="round-img avatar" src={post.avatar} alt="" />
                       <h4 className="post-name">{post.name}</h4>
                     </a>
@@ -44,6 +44,7 @@ function Posts({
                       className="btn btn-light post-like"
                       onClick={() => like(post._id)}
                       value="bouton pour aimer un post"
+                      aria-label="Aimer un commentaire"
                     >
                       <i className="fas fa-thumbs-up"></i>
                       <span>{post.likes.length > 0 && post.likes.length}</span>
@@ -53,10 +54,11 @@ function Posts({
                       className="btn btn-light post-unlike"
                       onClick={() => unlike(post._id)}
                       value="bouton pour ne pas aimer un post"
+                      aria-label="Ne pas aimer un commentaire"
                     >
                       <i className="fas fa-thumbs-down"></i>
                     </button>
-                    <Link to={`/post/${post._id}`} className="btn btn-primary comments count">
+                    <Link to={`/post/${post._id}`} className="btn btn-primary comments count" value="Ajouter un commentaire sur un post">
                       {" "}
                       {post.comments.length > 0 && (
                         <span className="comment-count">
@@ -70,6 +72,7 @@ function Posts({
                         onClick={() => deletePost(post._id)}
                         className="btn btn-danger post-delete"
                         value="Supprimer un post de la liste des postes"
+                        aria-label="Supprimer un post de la liste des postes"
                       >
                         
                       </button>

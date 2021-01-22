@@ -19,12 +19,12 @@ const Post = ({ match, getPostbyId, post: { post, loading } }) => {
         <Loading />
       ) : (
         <>
-          <Link to="/posts" className="btn">
+          <Link to="/posts" className="btn" value="Revenir à la liste des posts" >
             Retour aux posts
           </Link>
           <div className="post bg-white p-1 my-1">
             <div>
-              <Link to={`/profile/${post.user}`}>
+              <Link to={`/profile/${post.user}`} value="Accéder au profil d'un utilisateur">
                 <img className="round-img" src={post.avatar} alt="" />
                 <h4>{post.name}</h4>
               </Link>
