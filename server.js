@@ -7,7 +7,7 @@ const enforce = require('express-sslify');
 
 
 const app = express();
-const PORT = process.env.PORT || 3003;
+const PORT = process.env.PORT || 3000;
 
 app.use(compression({
   level: 9
